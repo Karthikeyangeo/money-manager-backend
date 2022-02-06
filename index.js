@@ -49,7 +49,7 @@ async function createConnection(){
 //calling that function 
 const client = await createConnection();        //await outside async fun allowed only in "type" :"module"
 
-const PORT = 9000;
+const PORT = process.env.PORT;
 
 app.get('/', (req, res)=> {
   res.send('Hello World')
